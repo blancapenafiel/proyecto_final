@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <title>Plantilla MVC</title>
+        <title>Diseñando Sueños</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <base href="<?php echo BASE_DOMAIN_DIR_URL?>">
@@ -12,11 +12,21 @@
         <script type="text/javascript" src="webroot/js/home.js"></script>
     </head>
     <body>
-        <header> 
-            <nav> 
-                <ul>
+        <header class="demo-header"> 
+            <h1 class="logo">Logo</h1>
+            <nav class="nav"> 
+                <ul class="nav-list">
                     <li><a href="<?php echo BASE_DIR_URL?>home/index">Home</a></li>
+                    <li><a href="<?php echo BASE_DIR_URL?>home/index">Acerca de</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Portfolio 1</a></li>
+                            <li><a href="#">Portfolio 2</a></li>
+                        </ul>
+                    </li>
                     <li><a href="<?php echo BASE_DIR_URL?>contacto/index">Contacto</a></li>
+                    <li><a href="<?php echo BASE_DIR_URL?>contacto/index">Accede</a></li>
+                    <li><a href="<?php echo BASE_DIR_URL?>contacto/index">Regístrate</a></li>
+
                 </ul>
             </nav>
         </header>
@@ -27,7 +37,7 @@
         </main>
         <footer>
 
-            <p><?php echo date("Y");?> © MVC</p>
+            <p><?php echo date("Y");?> © Blanca Peñafiel |Diseñando sueños</p>
             
         </footer>
     </body>

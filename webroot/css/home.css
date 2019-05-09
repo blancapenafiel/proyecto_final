@@ -1,26 +1,89 @@
-*{
-	margin: 0;
-	box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body, html{
-	height: 100%;
-	font-family: 'Cousine', monospace;
-	font-size: 18px;
+
+.demo-header:after, .nav:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.demo-header {
+  background-color: #252c41;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  padding: 0 15px;
+}
+
+.logo {
+  display: inline-block;
+  float: left;
+  width: 100px;
+  color: red;
+  margin-top: 10px;
+}
+
+.nav {
+  float: right;
+  width: calc(100% - 100px);
+  white-space: nowrap;
+}
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list {
+  float:right; ;
+}
+.nav-list > li {
+  display: inline-block;
+}
+.nav-list li {
+  position: relative;
+}
+.nav-list a {
+  display: block;
+  padding: 25px 20px;
+  color: #9ea6ba;
+  font-size: 16px;
+  text-decoration: none;
+}
+.nav-list .sub-menu {
+  position: absolute;
+  background-color: #222;
+  width: 200px;
+  right: 0;
+  top: 100%;
+  display: none;
+}
+.nav-list .sub-menu a {
+  padding: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.nav-list .sub-menu .sub-menu {
+  top: 0;
+  right: 100%;
+}
+.nav-list li:hover > .sub-menu {
+  display: block;
 }
 body{
-  	display: flex;
-  	flex-direction: column;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
 }
 main{
-  	flex: 1 0 auto;
-  	text-align: center;
+    flex: 1 0 auto;
+
+    text-align: center;
 }
-header{
-	padding: 20px;
-	border-bottom: 1px solid black;
-}
+
 footer{
-	padding: 20px;
-	text-align: center;
-	border-top: 1px solid black;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid black;
 }
