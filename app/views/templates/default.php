@@ -8,12 +8,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <base href="<?php echo BASE_DOMAIN_DIR_URL?>">
         <link rel="stylesheet" type="text/css" href="webroot/css/home.css">
+        <link href="https://fonts.googleapis.com/css?family=Kalam|Permanent+Marker" rel="stylesheet">
         <script type="text/javascript" src="webroot/js/jquery-3.3.1.min.js"></script>
         <script type="text/javascript" src="webroot/js/home.js"></script>
     </head>
     <body>
         <header class="demo-header"> 
-            <h1 class="logo">Logo</h1>
+            <img src="webroot/img/blanco.png" class="logo">
             <nav class="nav"> 
                 <ul class="nav-list">
                     <li><a href="<?php echo BASE_DIR_URL?>home/index">Home</a></li>

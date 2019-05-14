@@ -11,7 +11,7 @@
 }
 
 .demo-header {
-  background-color: #252c41;
+  background-color: #29ABE2;
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   padding: 0 15px;
@@ -21,7 +21,6 @@
   display: inline-block;
   float: left;
   width: 100px;
-  color: red;
   margin-top: 10px;
 }
 
@@ -48,13 +47,14 @@
 .nav-list a {
   display: block;
   padding: 25px 20px;
-  color: #9ea6ba;
-  font-size: 16px;
+  color: #ffff;
+  font-size: 20px;
+  font-family: 'Kalam', cursive;
   text-decoration: none;
 }
 .nav-list .sub-menu {
   position: absolute;
-  background-color: #222;
+  background-color: #29ABE2;
   width: 200px;
   right: 0;
   top: 100%;
@@ -71,19 +71,28 @@
 .nav-list li:hover > .sub-menu {
   display: block;
 }
-body{
-    display: flex;
-    height: 100%;
-    flex-direction: column;
-}
-main{
-    flex: 1 0 auto;
 
-    text-align: center;
+/*FOOTER*/
+html {
+    position: relative;
+    min-height: 100%;
 }
-
-footer{
-  padding: 20px;
-  text-align: center;
-  border-top: 1px solid black;
+body {
+    margin: 0 0 60px; /* bottom has to be the same as footer height */
+}
+footer {
+    /* just for demo */
+    background-color: #29ABE2;
+    border-top: 1px solid #E7E7E7;
+    color: #ffff;
+    text-align:center;
+    padding:20px;
+    font-family: 'Kalam', cursive;
+   /* just for demo */ 
+  
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 60px;
+    width: 100%;
 }

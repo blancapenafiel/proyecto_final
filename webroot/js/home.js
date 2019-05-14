@@ -114,7 +114,7 @@ function wilExtend(obj, src) {
 // classMore: string
 // classMoreChild: string
 const menu = new wilMenu('.nav-list', {
-  moreButton: '<a href="#">+ More</a>',
+  moreButton: '<a href="#">+ Más</a>',
   classMore: 'item-menu-more',
   classMoreChild: 'sub-menu-more sub-menu' });	
 
