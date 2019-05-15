@@ -9,12 +9,14 @@
         <base href="<?php echo BASE_DOMAIN_DIR_URL?>">
         <link rel="stylesheet" type="text/css" href="webroot/css/home.css">
         <link href="https://fonts.googleapis.com/css?family=Kalam|Permanent+Marker" rel="stylesheet">
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:600'>
+        <link rel="stylesheet" href="webroot/css/accede.css">
         <script type="text/javascript" src="webroot/js/jquery-3.3.1.min.js"></script>
         <script type="text/javascript" src="webroot/js/home.js"></script>
     </head>
-    <body>
+   
         <header class="demo-header"> 
-            <img src="webroot/img/blanco.png" class="logo">
+            <a href="<?php echo BASE_DIR_URL?>home/index"><img src="webroot/img/blanco.png" class="logo"></a>
             <nav class="nav"> 
                 <ul class="nav-list">
                     <li><a href="<?php echo BASE_DIR_URL?>home/index">Home</a></li>
@@ -25,21 +27,23 @@
                         </ul>
                     </li>
                     <li><a href="<?php echo BASE_DIR_URL?>contacto/index">Contacto</a></li>
-                    <li><a href="<?php echo BASE_DIR_URL?>contacto/index">Accede</a></li>
-                    <li><a href="<?php echo BASE_DIR_URL?>contacto/index">Regístrate</a></li>
+                    <li><a href="<?php echo BASE_DIR_URL?>accede/index">Accede</a></li>
+                   
 
                 </ul>
             </nav>
         </header>
+         <body>
         <main> 
 
             <?php echo $content_for_layout;?> 
 
         </main>
+        </body>
         <footer>
 
             <p><?php echo date("Y");?> © Blanca Peñafiel |Diseñando sueños</p>
             
         </footer>
-    </body>
+    
 </html>
