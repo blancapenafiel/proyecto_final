@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="webroot/css/accede.css">
         <script type="text/javascript" src="webroot/js/jquery-3.3.1.min.js"></script>
         <script type="text/javascript" src="webroot/js/home.js"></script>
+        <script type="text/javascript" src="webroot/js/accede.js"></script>
     </head>
    
         <header class="demo-header"> 
