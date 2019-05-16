@@ -39,6 +39,23 @@ $(document).ready(function(){
 			$("#contraR").removeClass("error-validation");
 		}
 
+	if($("#contraRR").val() == ""){
+			msg += "El campo repite contraseña está vacío <br>";
+			$("#contraRR").addClass("error-validation");
+		} 
+		else 
+		{
+			if ($("#contraRR").val() != $("#contraR").val())
+			{
+			msg += "El campo contraseña no coincide <br>";	
+			}
+			else
+			{
+			$("#contraRR").removeClass("error-validation");	
+			}
+			
+		}		
+
   		$("#errorsR").html(msg);
 
   		if(msg == ""){

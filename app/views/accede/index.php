@@ -43,16 +43,16 @@
 					<label for="pass" class="label">Password</label>
 					<input id="contraR" name="contraR"  type="password" class="input" data-type="password">
 				</div>
-				<!-- <div class="group">
+				<div class="group">
 					<label for="pass" class="label">Repita Password</label>
-					<input id="pass" type="password" class="input" data-type="password">
-				</div> -->
+					<input id="contraRR" type="password" class="input" data-type="password">
+				</div>
 				<div class="group">
 					<label for="pass" class="label">Email </label>
 					<input id="email" name="email" type="email" class="input">
 				</div>
 				<div class="group">
-					<input type="submit" class="button" value="Registrarse">
+					<input type="button" id="registrar" class="button" value="Registrarse">
 				</div>
 				<div id="errorsR"></div>
 				<form>
