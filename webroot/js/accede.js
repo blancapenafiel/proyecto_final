@@ -63,7 +63,7 @@ $(document).ready(function(){
   			$.ajax({
 
   				type: 'post',
-  				url: '/m2/home/registro',
+  				url: '/proyecto_final/accede/registro',
   				data: $("#registro").serialize(),
   				dataType: 'json',
 
