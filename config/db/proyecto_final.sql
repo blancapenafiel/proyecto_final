@@ -78,6 +78,7 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
 select * from USUARIOS;
 
-INSERT into usuarios ('id','usuario','password','email')values (null, 'blanca', 'blanca', 'blanca');
+INSERT into usuarios (`id`,`usuario`,`password`,`email`) values (null, 'blanca', 'blanca', 'blanca');
 
 
+INSERT into usuarios (`id`,`usuario`,`password`,`email`)values (null, 'nolasc', 'nolasc', 'blanca');
