@@ -1,17 +1,18 @@
 <?php defined('BASEPATH') or exit ('No se permite acceso directo');
 
 class accede extends Model {
-	public function reg($user,$pass)
+	public function reg($user,$pass,$email)
 	{
 
 
 		$id = null;
 		$connect = Model::getInstanceDB();
-		$sql = "INSERT into usuarios values (:id, :usuario, :psw);";
+		$sql = "INSERT into usuarios (`id`,`usuario`,`password`,`email`)values (:id, :usuario, :psw, :mail);";
 		$stmt = $connect->prepare($sql);
 		$stmt->bindParam(':id', $id);
 		$stmt->bindParam(':usuario', $user);
-		$stmt->bindParam(':psw', $pass);		
+		$stmt->bindParam(':psw', $pass);
+		$stmt->bindParam(':mail', $email);				
 
 		//si se ejecuta correctamente el INSERT, retorno al controlador el mensaje de OK
 		if(!$stmt->execute()) {
@@ -33,7 +34,7 @@ class accede extends Model {
 		// $id = null;
 		$connect = Model::getInstanceDB();
 		// $sql = 'select * from usuarios where :dato=$user and :dato2=$pass;';
-		$sql = "SELECT * from usuarios WHERE usuario = :usuario and psw=:psw;";
+		$sql = "SELECT * from usuarios WHERE usuario = :usuario and password=:psw;";
 		$stmt = $connect->prepare($sql);
 		// $stmt->bindParam(':id', $id);
 		$stmt->bindParam(':usuario', $user);
@@ -51,6 +52,7 @@ class accede extends Model {
 
 		if($rows == 1)
 		{
+			//crear $_SESSION
 			return 'log correcto';
 		}
 		else 

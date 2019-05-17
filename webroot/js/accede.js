@@ -22,7 +22,7 @@ $(document).ready(function(){
 		$("#registro").css("display","block");
 	});
 	
-	$("#registar").click(function(){
+	$("#registrar").click(function(){
 
 		msg = "";
 
@@ -39,7 +39,7 @@ $(document).ready(function(){
 			$("#contraR").removeClass("error-validation");
 		}
 
-	if($("#contraRR").val() == ""){
+		if($("#contraRR").val() == ""){
 			msg += "El campo repite contraseña está vacío <br>";
 			$("#contraRR").addClass("error-validation");
 		} 
@@ -108,7 +108,7 @@ $(document).ready(function(){
   			$.ajax({
 
   				type: 'post',
-  				url: '/m2/home/login',
+  				url: '/proyecto_final/accede/login',
   				data: $("#login").serialize(),
   				dataType: 'json',
 

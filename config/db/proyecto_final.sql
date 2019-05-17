@@ -70,6 +70,14 @@ CREATE TABLE IF NOT EXISTS `proyecto_final`.`RELATOS` (
 ENGINE = InnoDB;
 
 
+SELECT * from uusuariossuarios WHERE usuario = 'blanca' and password='blanca';
+
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+select * from USUARIOS;
+
+INSERT into usuarios ('id','usuario','password','email')values (null, 'blanca', 'blanca', 'blanca');
+
+

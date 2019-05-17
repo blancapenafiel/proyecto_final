@@ -12,14 +12,15 @@ class accedeController extends Controller {
 		if (isset($_POST['usuarioR']))
 		{
 			$user = ($_POST['usuarioR']);
-			$pass = ($_POST['contraR']);			
+			$pass = ($_POST['contraR']);
+			$email = ($_POST['emailR']);			
 			//recoger $_POST en variables
 
-			require_once(ROOT . DS . 'app' . DS . 'models' . DS . 'aacedeModel.php');
+			require_once(ROOT . DS . 'app' . DS . 'models' . DS . 'accedeModel.php');
 
 			$a = new accede;
 			//instanciar new model  $a = new home;
-			$mensaje = $a->reg($user,$pass);
+			$mensaje = $a->reg($user,$pass,$email);
 			//llamar al metodo $mensaje = $a->reg($user,$pass)
 			echo json_encode($mensaje);
 		}
@@ -32,7 +33,7 @@ class accedeController extends Controller {
 			$pass = ($_POST['contraL']);			
 			//recoger $_POST en variables
 
-			require_once(ROOT . DS . 'app' . DS . 'models' . DS . 'homeModel.php');
+			require_once(ROOT . DS . 'app' . DS . 'models' . DS . 'accedeModel.php');
 			
 			$a = new accede;
 			//instanciar new model  $a = new home;
