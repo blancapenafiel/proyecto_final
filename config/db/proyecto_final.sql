@@ -24,6 +24,7 @@ CREATE TABLE IF NOT EXISTS `proyecto_final`.`USUARIOS` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `usuario` VARCHAR(50) NOT NULL,
   `password` VARCHAR(180) NOT NULL,
+  `email` VARCHAR(60) NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
