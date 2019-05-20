@@ -52,8 +52,10 @@ class accede extends Model {
 
 		if($rows == 1)
 		{
-			//crear $_SESSION
-			return 'log correcto';
+			//Para el inicio de sesión $_SESSION
+			$_SESSION['usuario']= $user;
+			return 'Bienvenid@'.'<br>'.$user;
+			
 		}
 		else 
 		{

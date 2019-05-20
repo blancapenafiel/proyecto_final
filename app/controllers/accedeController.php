@@ -41,6 +41,13 @@ class accedeController extends Controller {
 			//llamar al metodo $mensaje = $a->reg($user,$pass)
 			echo json_encode($mensaje);
 		}
+	}
+
+	public function cerrar()
+	{
+		unset($_SESSION["usuario"]);
+		session_destroy();
+		header('Location:'. BASE_DOMAIN_DIR_URL . 'home/index');
 	}	
 
 }

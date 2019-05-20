@@ -120,6 +120,13 @@ $(document).ready(function(){
 
   					$("#errorsL").html(data);
 
+ // PARA GENERAR EL INICIO DE SESION
+  					setTimeout(function(){ 
+
+  						location.href = "perfil/index";
+
+  					}, 2000);
+
   				},
 
   				error: function(){

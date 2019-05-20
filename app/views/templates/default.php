@@ -15,26 +15,24 @@
         <script type="text/javascript" src="webroot/js/home.js"></script>
         <script type="text/javascript" src="webroot/js/accede.js"></script>
     </head>
-   
         <header class="demo-header"> 
-            <a href="<?php echo BASE_DIR_URL?>home/index"><img src="webroot/img/blanco.png" class="logo"></a>
-            <nav class="nav"> 
-                <ul class="nav-list">
-                    <li><a href="<?php echo BASE_DIR_URL?>home/index">Home</a></li>
-                    <li><a href="<?php echo BASE_DIR_URL?>home/index">Acerca de</a>
-                        <ul class="sub-menu">
-                            <li><a href="#">Portfolio 1</a></li>
-                            <li><a href="#">Portfolio 2</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="<?php echo BASE_DIR_URL?>contacto/index">Contacto</a></li>
-                    <li><a href="<?php echo BASE_DIR_URL?>accede/index">Accede</a></li>
-                   
+            <?php 
+                if(isset($_SESSION['usuario'])){
 
-                </ul>
-            </nav>
+                    require_once(ROOT . DS . 'app' . DS . 'views' . DS . 'templates' . DS . 'headerLOG.php');
+    
+
+                } else{
+
+                    require_once(ROOT . DS . 'app' . DS . 'views' . DS . 'templates' . DS . 'header.php');
+
+                }
+
+
+            ?>
+            
         </header>
-         <body>
+        <body>
         <main> 
 
             <?php echo $content_for_layout;?> 
