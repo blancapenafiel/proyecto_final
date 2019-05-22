@@ -50,7 +50,7 @@ DROP TABLE IF EXISTS `proyecto_final`.`RELATOS` ;
 CREATE TABLE IF NOT EXISTS `proyecto_final`.`RELATOS` (
   `id_relatos` INT NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(50) NULL,
-  `descripcion` VARCHAR(300) NULL,
+  `descripcion` VARCHAR(3000) NULL,
   `url_relato` VARCHAR(130) NULL,
   `USUARIOS_id` INT NOT NULL,
   `CATEGORIAS_id` INT NOT NULL,
@@ -70,15 +70,15 @@ CREATE TABLE IF NOT EXISTS `proyecto_final`.`RELATOS` (
 ENGINE = InnoDB;
 
 
-SELECT * from uusuariossuarios WHERE usuario = 'blanca' and password='blanca';
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
-select * from USUARIOS;
+
 
 INSERT into usuarios (`id`,`usuario`,`password`,`email`) values (null, 'blanca', 'blanca', 'blanca');
 
 
 INSERT into usuarios (`id`,`usuario`,`password`,`email`)values (null, 'nolasc', 'nolasc', 'blanca');
+select * from USUARIOS;

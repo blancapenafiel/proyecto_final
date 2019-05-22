@@ -7,5 +7,5 @@ class homeController extends Controller {
         $this->render('index');
 
     }
-
+   
 }
