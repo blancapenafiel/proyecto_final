@@ -9,11 +9,11 @@ class categoriaController extends Controller {
     }
     public function anadir_cat(){
 
-		if (isset($_POST['usuarioR']))
+		if (isset($_POST['cat_button']))
 		{
-			$user = ($_POST['usuarioR']);
-			$pass = ($_POST['contraR']);
-			$email = ($_POST['emailR']);			
+			$category = ($_POST['categoria']);
+			$url_cat = ($_POST['imagen']);
+						
 			//recoger $_POST en variables
 
 			require_once(ROOT . DS . 'app' . DS . 'models' . DS . 'categoriaModel.php');

@@ -167,7 +167,7 @@ a{color:inherit;text-decoration:none}
 }
 
 /*MENSAJE DE ERROR*/
-#errorsR, #errorsL, #errorsM{
+#errorsR, #errorsL, #errorsM, #errorC{
 	margin-top: 20px;
 	text-align: center;
 	color: red;

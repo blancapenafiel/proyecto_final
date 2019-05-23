@@ -82,3 +82,4 @@ INSERT into usuarios (`id`,`usuario`,`password`,`email`) values (null, 'blanca',
 
 INSERT into usuarios (`id`,`usuario`,`password`,`email`)values (null, 'nolasc', 'nolasc', 'blanca');
 select * from USUARIOS;
+select * from CATEGORIAS;

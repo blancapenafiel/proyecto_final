@@ -138,4 +138,63 @@ $(document).ready(function(){
   		}
 	});
 
+	//AÑADIR CATEGORÍA
+	//validación
+	// id del form
+	$("#category span").click(function(){
+		$("#errorC").html("");
+		$("input[type=file]").val("");
+	});
+
+	//id submit añadir categoría
+	$("#cat_button").click(function(){
+
+		msg = "";
+
+		if($("#categoria").val() == ""){
+			msg += "Ingrese una categoria <br>";
+			$("#categoria").addClass("error-validation");
+		} else {
+			$("#categoria").removeClass("error-validation");
+		}
+		if($("#imagen").val() == ""){
+			msg += "Seleccione una imagen<br>";
+			$("#imagen").addClass("error-validation");
+		} else {
+			$("#imagen").removeClass("error-validation");
+		}
+
+		
+
+  		$("#errorC").html(msg);
+
+  		if(msg == ""){
+  			
+  			$.ajax({
+
+  				type: 'post',
+  				url: '/proyecto_final/categoria/anadir_cat',
+  				// id del form
+  				data: $("#category").serialize(),
+  				dataType: 'json',
+
+  				beforeSend: function(){
+  					$("#errorC").html("Enviando datos...");
+  				},
+
+  				success: function(data){
+  					$("#errorC").html(data);
+  				},
+
+  				error: function(){
+  					$("#errorC").html("Error en el envío de datos al server");
+  				}
+
+  			});
+
+  		}
+	});
+
+
+
 });
