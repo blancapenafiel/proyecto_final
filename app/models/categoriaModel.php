@@ -1,17 +1,17 @@
 <?php defined('BASEPATH') or exit ('No se permite acceso directo');
 
 class categoria extends Model {
-	public function anadir_cat($id,$nombre,$url)
+	public function anadir_cat($nombre)
 	{
 
 
 		$id = null;
 		$connect = Model::getInstanceDB();
-		$sql = "INSERT into CATEGORIAS (`id`,`nombre_cat`,`url_cat`)values (:id, :categ, :url);";
+		$sql = "INSERT into CATEGORIAS (`id`,`nombre_cat`)values (:id, :categ);";
 		$stmt = $connect->prepare($sql);
 		$stmt->bindParam(':id', $id);
-		$stmt->bindParam(':categ', $category);
-		$stmt->bindParam(':url', $url_cat);
+		$stmt->bindParam(':categ', $nombre);
+		
 					
 
 		//si se ejecuta correctamente el INSERT, retorno al controlador el mensaje de OK

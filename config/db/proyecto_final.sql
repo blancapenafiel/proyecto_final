@@ -37,7 +37,7 @@ DROP TABLE IF EXISTS `proyecto_final`.`CATEGORIAS` ;
 CREATE TABLE IF NOT EXISTS `proyecto_final`.`CATEGORIAS` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `nombre_cat` VARCHAR(50) NULL,
-  `url_cat` VARCHAR(130) NULL,
+ 
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
@@ -78,8 +78,14 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
 
 INSERT into usuarios (`id`,`usuario`,`password`,`email`) values (null, 'blanca', 'blanca', 'blanca');
+INSERT into categorias (`id`,`nombre_cat`) values (null, 'Ficción');
+INSERT into categorias (`id`,`nombre_cat`) values (null, 'Mascotas');
+INSERT into categorias (`id`,`nombre_cat`) values (null, 'Navidad');
+INSERT into categorias (`id`,`nombre_cat`) values (null, 'Halloween');
 
 
 INSERT into usuarios (`id`,`usuario`,`password`,`email`)values (null, 'nolasc', 'nolasc', 'blanca');
+delete from categorias where id = '6';
+
 select * from USUARIOS;
 select * from CATEGORIAS;

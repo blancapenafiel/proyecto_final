@@ -1,9 +1,9 @@
 <?php defined('BASEPATH') or exit ('No se permite acceso directo');?>
 
-<h1>FORMULARIO DE CONTACTO</h1>
+
 
 <div id="formulario">
-			<h2>Enviar un mensaje</h2>
+			<h1>Enviar un mensaje</h1>
 			<form>
 				<div>
 					<input type="text" placeholder="Nombre y apellidos *" class="inputs" required="">

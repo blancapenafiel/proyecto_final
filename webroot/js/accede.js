@@ -143,7 +143,6 @@ $(document).ready(function(){
 	// id del form
 	$("#category span").click(function(){
 		$("#errorC").html("");
-		$("input[type=file]").val("");
 	});
 
 	//id submit añadir categoría
@@ -157,15 +156,7 @@ $(document).ready(function(){
 		} else {
 			$("#categoria").removeClass("error-validation");
 		}
-		if($("#imagen").val() == ""){
-			msg += "Seleccione una imagen<br>";
-			$("#imagen").addClass("error-validation");
-		} else {
-			$("#imagen").removeClass("error-validation");
-		}
-
 		
-
   		$("#errorC").html(msg);
 
   		if(msg == ""){

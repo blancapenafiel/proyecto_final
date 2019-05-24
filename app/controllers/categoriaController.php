@@ -9,19 +9,19 @@ class categoriaController extends Controller {
     }
     public function anadir_cat(){
 
-		if (isset($_POST['cat_button']))
+		if (isset($_POST['categoria']))
 		{
-			$category = ($_POST['categoria']);
-			$url_cat = ($_POST['imagen']);
+			$category = $_POST['categoria'];
+			
 						
 			//recoger $_POST en variables
 
 			require_once(ROOT . DS . 'app' . DS . 'models' . DS . 'categoriaModel.php');
 
 			$a = new categoria;
-			//instanciar new model  $a = new home;
-			$mensaje = $a->anadir_cat($id,$category,$url_cat);
-			//llamar al metodo $mensaje = $a->anadir_cat($id,$category,$url_cat);
+			//instanciar new model  $a = anadir_cat;
+			$mensaje = $a->anadir_cat($category);
+			//llamar al metodo $mensaje = $a->anadir_cat($id,$category);
 			echo json_encode($mensaje);
 		}
 	}
