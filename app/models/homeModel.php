@@ -5,6 +5,20 @@ class home extends Model {
 	public function imprimir_Cat()
 	{
 
+
+		$connect = Model::getInstanceDB();
+		$sql = "SELECT * from categorias;";
+		$stmt = $connect->prepare($sql);
+		$stmt->execute();
+		$categorias = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+		return $categorias;
+
+	}
+
+	public function ver_all()
+	{
+
 		$connect = Model::getInstanceDB();
 		$sql = "SELECT * from categorias;";
 		$stmt = $connect->prepare($sql);

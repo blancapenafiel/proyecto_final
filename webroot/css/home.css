@@ -98,13 +98,13 @@ footer {
 }
 
 /*CATEGORIAS*/
-* {
+/** {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-}
+}*/
 
 /*body {
   background: #FFF;
@@ -119,13 +119,6 @@ a {
   text-decoration: none;
 }
 
-.clearfix:after {
-  content: '';
-  display: block;
-  width: 0;
-  height: 0;
-  clear: both;
-}
 
 /** ==========================================
  * Contendor Principal 
@@ -189,75 +182,62 @@ a {
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-
-/* Imagenes / En este caso divs de colores :C
- --------------------------------------------------*/
- .list-images {
-  color: #000;
-  display: block;
-  margin-top: 40px;
-  text-align: center;
- }
-
- .list-images li {
-  opacity: 0.3;
-  width: 200px;
-  height: 120px;
-  margin: 5px;
-  display: inline-block;
-  border: 4px solid #FFF;
-  -webkit-box-shadow: 0 0 0 1px rgba(0,0,0,0.15);
-  box-shadow: 0 0 0 1px rgba(0,0,0,0.15);
-  color: #FFF;
-  font-size: 1.5em;
-  font-weight: 700;
-  -webkit-transform: scale(0.9);
-  -ms-transform: scale(0.9);
-  -o-transform: scale(0.9);
-  transform: scale(0.9);
-  -webkit-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-  transition: all 0.4s ease;
- }
-
-.list-images li span {
-  position: relative;
-  top: 40px;
+/*CONTENEDOR HISTORIAS*/
+.row
+{
+  max-width: 75rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+.contenedor>div{ 
+  width: 22em;
+  height: 35em;
+  margin-top: 0;
+  margin-bottom: 4%;
+  background: white;
 }
 
-.list-images .type-ficcion {background: #3fab91;}
-.list-images .type-mascotas {background: #ffbb45;}
-.list-images .type-navidad {background: #db559a;}
-.list-images .type-halloween {background: #994356;}
-
-/* Estilos cuando un radio esta seleccionado
- --------------------------------------------------*/
-#all:checked ~ .list-category label[for="all"],
-#ficcion:checked ~ .list-category label[for="ficcion"], 
-#mascotas:checked ~ .list-category label[for="mascotas"], 
-#navidad:checked ~ .list-category label[for="navidad"], 
-#halloween:checked ~ .list-category label[for="halloween"] {
-  background: #1396e1;
-  color: #FFF;
+.zelda{ 
+  width: 90%;
+  height: 30%;
+  margin: 1em;
+  background-image: url("../img/bosque.png");
+  background-size: cover; 
+  position: center;
 }
 
-/* Filtramos las clases mediante el selector ~
- --------------------------------------------------*/
-#all:checked ~ .list-images li {
-  opacity: 1;
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  -o-transform: scale(1);
-  transform: scale(1);
+.rime{ 
+  width: 90%;
+  height: 30%;
+  margin: 1em;
+  background-image: url("../img/bosque.png");
+  background-size: cover; 
+  position: center;
 }
 
-#ficcion:checked ~ .list-images .type-ficcion,
-#mascotas:checked ~ .list-images .type-mascotas,
-#navidad:checked ~ .list-images .type-navidad,
-#halloween:checked ~ .list-images .type-halloween {
-  opacity: 1;
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  -o-transform: scale(1);
-  transform: scale(1);
+.gris{ 
+  width: 90%;
+  height: 30%;
+  margin: 1em;
+  background-image: url("../img/bosque.png");
+  background-size: cover; 
+  position: center;
+}
+
+.skyrim{ 
+  width: 90%;
+  height: 30%;
+  margin: 1em;
+  background-image: url("../images/skyrim.png");
+  background-size: cover; 
+  position: center;
+}
+
+.resident{
+  width: 90%;
+  height: 30%;
+  margin: 1em;
+  background-image: url("../images/resident-evil.png");
+  background-size: cover; 
+  position: center;
 }

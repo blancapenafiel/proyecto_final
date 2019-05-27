@@ -18,5 +18,21 @@ class homeController extends Controller {
         $this->render('index');
 
     }
+    public function allcategory() {
+
+
+    	require_once(ROOT . DS . 'app' . DS . 'models' . DS . 'homeModel.php');
+
+    	$a = new home;
+			
+		$cat = $a->imprimir_Cat();
+
+		$d['nom_cat'] = $cat;
+
+        $this->set($d);
+
+        $this->render('index');
+
+    }
    
 }

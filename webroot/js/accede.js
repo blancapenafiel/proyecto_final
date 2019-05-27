@@ -186,6 +186,69 @@ $(document).ready(function(){
   		}
 	});
 
+	//AÑADIR RELATO
+	//validación
+	//Id form
+
+	$("#formInsert span").click(function(){
+		$("#errorC").html("");
+	});
+
+	//id submit añadir relato
+	$("#story_button").click(function(){
+
+		msg = "";
+
+		if($("#categoriasR").val() == ""){
+			msg += "Elija una categoria <br>";
+			$("#categoriasR").addClass("error-validation");
+		} else {
+			$("#categoriasR").removeClass("error-validation");
+		}
+
+		if($("#nameRelato").val() == ""){
+			msg += "Ingrese el título <br>";
+			$("#nameRelato").addClass("error-validation");
+		} else {
+			$("#nameRelato").removeClass("error-validation");
+		}
+
+		if($("#relato").val() == ""){
+			msg += "Añada su relato <br>";
+			$("#relato").addClass("error-validation");
+		} else {
+			$("#relato").removeClass("error-validation");
+		}
+		
+  		$("#errorC").html(msg);
+
+  		if(msg == ""){
+  			
+  			$.ajax({
+
+  				type: 'post',
+  				url: '/proyecto_final/categoria/anadir_relato',
+  				// id del form
+  				data: $("#formInsert").serialize(),
+  				dataType: 'json',
+
+  				beforeSend: function(){
+  					$("#errorC").html("Enviando datos...");
+  				},
+
+  				success: function(data){
+  					$("#errorC").html(data);
+  				},
+
+  				error: function(){
+  					$("#errorC").html("Error en el envío de datos al server");
+  				}
+
+  			});
+
+  		}
+	});
+
 
 
 });
