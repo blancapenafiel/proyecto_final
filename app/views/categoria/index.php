@@ -15,6 +15,7 @@
 	<div id="insertar" class="row">
 		<form  id="formInsert" method="post" enctype='multipart/form-data'>
             <h2>Añadir un relato</h2>  
+            <label class="catF">Elige una categoría</label>
             <select id="categoriasR" name="categoriasR">
             	<?php
 					foreach ($nom_cat as $value) 
@@ -26,12 +27,33 @@
             	
             </select>
             <input type="text" name="nombre" id="nameRelato" placeholder="Título de mi historia"></input><br> 
+            <div class="img-box">
+				<img src="<?php echo $userData['image'];?>" id="user-img">
+				<input class="none" type="file" id="user-img-file" name="user-img-file">
+				<label for="user-img-file" class="center">
+					Click aquí para subir imagen (2MB máx).
+				</label>
+			</div>
             <textarea name="relato" id="relato" placeholder="Érase una vez..."></textarea><br>
-            <label for="imagen" id="lArchivo">Subir imagen</label>
-            <input type="file" id="imagen" name="imagen" onchange="readURL(this);" ></input><br>
-            <img id="blah" src="#" alt="fondo del relato" /><br>
             <input type="button" value="Insertar" name="insertar" id="story_button">
         </form>
         <div id="errorSubida"></div>
 	</div>
 </div>
+REFERENCIA PARA SUBIR IMAGENES
+<form method="post" id="modificar" enctype="multipart/form-data">
+			<h3>MODIFICAR DATOS DE USUARIO</h3>
+
+			<div class="img-box">
+				<img src="<?php echo $userData['image'];?>" id="user-img">
+				<input type="file" id="user-img-file" name="user-img-file">
+				<label for="user-img-file" class="center">
+					Click aquí para subir imagen (2MB máx).
+				</label>
+			</div>
+
+			
+
+			<div id="errorsM"></div>
+
+		</form>
