@@ -52,7 +52,7 @@ class homeController extends Controller {
 
     }
 
-    public function allrelatos() {
+    static function allrelatos() {
 
 
         require_once(ROOT . DS . 'app' . DS . 'models' . DS . 'homeModel.php');
@@ -60,14 +60,14 @@ class homeController extends Controller {
         $b = new home;
             
         $relatos = $b->ver_relatos();
+        return $relatos;
 
-
-        $s['stories'] = $relatos;
-        // var_dump($d);
-        $this->set($s);
+        // $s['stories'] = $relatos;
+        // // var_dump($d);
+        // $this->set($s);
         
 
-        $this->render('index');
+        // $this->render('index');
 
     }
    

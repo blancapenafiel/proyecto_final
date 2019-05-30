@@ -86,7 +86,10 @@ INSERT into categorias (`id`,`nombre_cat`) values (null, 'Halloween');
 
 INSERT into usuarios (`id`,`usuario`,`password`,`email`)values (null, 'nolasc', 'nolasc', 'blanca');
 delete from categorias where id = '6';
+delete from categorias where id = '5';
 
 select * from USUARIOS;
 select * from CATEGORIAS;
 select * from RELATOS;
+
+INSERT into RELATOS (`nombre`,`descripcion`,`url_relato`, `USUARIOS_id`, `CATEGORIAS_id`)values (":titulo", ":descrip", ":file", "1", "1" );

@@ -22,18 +22,22 @@
 		</div>
 	</div>
 	<div class="contenedor">
-	<div class="row" id="mainContent">
+		<div class="row" id="mainContent">
 			<?php
+				$relatos = homeController::allrelatos();
 			
-				 foreach ($stories as $value) 
+				 foreach ($relatos as $value) 
 					{
-					var_dump($stories);
-							// var_dump($stories['nombre']);	
-				// echo "<div".utf8_encode($value[]['nombre'])."</div>";
+
+						echo ($value['nombre']);	
+						echo "<div>".utf8_encode($value['descripcion'])."</div>";
+						var_dump($value);
+						echo "<br>";
 				 	}
+
 			?>
 		</div>
 		<a type="application/rss+xml" href="prueba.rss">
 			<img src="rss.png">
 		</a>
-		</div>	
+	</div>	
