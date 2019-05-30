@@ -89,3 +89,4 @@ delete from categorias where id = '6';
 
 select * from USUARIOS;
 select * from CATEGORIAS;
+select * from RELATOS;

@@ -28,6 +28,19 @@ class home extends Model {
 		return $categorias;
 
 	}
+
+	public function ver_relatos()
+	{
+
+		$connect = Model::getInstanceDB();
+		$sql = "SELECT * from relatos;";
+		$stmt = $connect->prepare($sql);
+		$stmt->execute();
+		$relatos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+		return $relatos;
+
+	}
 	
 
 }

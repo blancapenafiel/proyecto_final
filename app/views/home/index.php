@@ -10,7 +10,7 @@
 		<div class="container">
 			
 			<ul class="list-category">
-				<li><label for="all">Todas</label></li>
+				
 				<?php
 					foreach ($nom_cat as $value) 
 					{
@@ -24,7 +24,13 @@
 	<div class="contenedor">
 	<div class="row" id="mainContent">
 			<?php
-				// game::getNews();
+			
+				 foreach ($stories as $value) 
+					{
+					var_dump($stories);
+							// var_dump($stories['nombre']);	
+				// echo "<div".utf8_encode($value[]['nombre'])."</div>";
+				 	}
 			?>
 		</div>
 		<a type="application/rss+xml" href="prueba.rss">

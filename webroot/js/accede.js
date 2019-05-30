@@ -175,6 +175,10 @@ $(document).ready(function(){
 
   				success: function(data){
   					$("#errorC").html(data);
+  					setTimeout(function(){ 
+  						location.reload();
+  					}, 3000);
+  					
   				},
 
   				error: function(){
@@ -220,34 +224,49 @@ $(document).ready(function(){
 			$("#relato").removeClass("error-validation");
 		}
 		
-  		$("#errorC").html(msg);
+  		$("#errorSubida").html(msg);
 
   		if(msg == ""){
+  			document.getElemntById("formInsert").submit();
   			
-  			$.ajax({
+  			// $.ajax({
 
-  				type: 'post',
-  				url: '/proyecto_final/categoria/anadir_relato',
-  				// id del form
-  				data: $("#formInsert").serialize(),
-  				dataType: 'json',
+  			// 	type: 'post',
+  			// 	url: '/proyecto_final/categoria/anadir_relato',
+  			// 	// id del form
+  			// 	data: $("#formInsert").serialize(),
+  			// 	dataType: 'json',
 
-  				beforeSend: function(){
-  					$("#errorC").html("Enviando datos...");
-  				},
+  			// 	beforeSend: function(){
+  			// 		$("#errorSubida").html("Enviando datos...");
+  			// 	},
 
-  				success: function(data){
-  					$("#errorC").html(data);
-  				},
+  			// 	success: function(data){
+  			// 		$("#errorSubida").html(data);
+  			// 	},
 
-  				error: function(){
-  					$("#errorC").html("Error en el envío de datos al server");
-  				}
+  			// 	error: function(){
+  			// 		$("#errorSubida").html("Error en el envío de datos al server");
+  			// 	}
 
-  			});
+  			// });
 
   		}
 	});
+
+	function readURL(input) {
+        if (input.files && input.files[0]){
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $('#user-img').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    $('#user-img-file').change(function(){
+        readURL(this);
+    });
 
 
 

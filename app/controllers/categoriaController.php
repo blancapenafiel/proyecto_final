@@ -19,6 +19,8 @@ class categoriaController extends Controller {
     }
     public function anadir_cat(){
 
+    	
+
 		if (isset($_POST['categoria']))
 		{
 			$category = $_POST['categoria'];
@@ -37,16 +39,16 @@ class categoriaController extends Controller {
 	}
 
 	public function anadir_relato(){
+		$user = $_SESSION['usuario'][0];
 
 		if (isset($_POST['categoriasR']))
 		{
+
 			$cat_story = $_POST['categoriasR'];
 			$nom_story = $_POST['nombre'];
 			$story = $_POST['relato'];
-			$url = $_POST['imagen'];
-			
-			
-			
+			// $url = insertImage($_FILES[]$_POST['imagen'];
+			$insertImg = insertImage($_FILES['user-img-file'], 'user-image', 2000000, 'user-img/img', $user);
 						
 			//recoger $_POST en variables
 
@@ -54,9 +56,9 @@ class categoriaController extends Controller {
 
 			$a = new categoria;
 			//instanciar new model  $a = anadir_cat;
-			$mensaje = $a->anadir_relato($cat_story, $nom_story, $story, $url);
-			//llamar al metodo $mensaje = $a->anadir_relato($relato);
-			echo json_encode($mensaje);
+			$mensaje = $a->anadir_relato($cat_story, $nom_story, $story, $insertImg[2], $user);
+			
+			header("location: proyecto_final/home/index");
 		}
 	}
 

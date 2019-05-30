@@ -46,14 +46,12 @@ class accede extends Model {
 
 
 		$stmt->execute();
-		$rows = $stmt->rowCount();
+		$rows = $stmt->fetch(PDO::FETCH_ASSOC);
 
-		sleep(2);
-
-		if($rows == 1)
+		if(count($rows)>0)
 		{
 			//Para el inicio de sesión $_SESSION
-			$_SESSION['usuario']= $user;
+			$_SESSION['usuario']= [$rows["id"], $rows["usuario"]];
 			return 'Bienvenid@'.'<br>'.$user;
 			
 		}

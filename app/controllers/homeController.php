@@ -15,6 +15,23 @@ class homeController extends Controller {
 
         $this->set($d);
 
+
+
+
+
+        // relatos
+        // $b = new home;
+            
+        // $relatos = $b->ver_relatos();
+
+
+        // $s['stories'] = $relatos;
+        // var_dump($d);
+        // $this->set($s);
+        
+
+
+
         $this->render('index');
 
     }
@@ -30,6 +47,25 @@ class homeController extends Controller {
 		$d['nom_cat'] = $cat;
 
         $this->set($d);
+
+        $this->render('index');
+
+    }
+
+    public function allrelatos() {
+
+
+        require_once(ROOT . DS . 'app' . DS . 'models' . DS . 'homeModel.php');
+
+        $b = new home;
+            
+        $relatos = $b->ver_relatos();
+
+
+        $s['stories'] = $relatos;
+        // var_dump($d);
+        $this->set($s);
+        
 
         $this->render('index');
 
