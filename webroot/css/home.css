@@ -10,6 +10,11 @@
   clear: both;
 }
 
+.caja{
+  border: 1px solid gray;
+  margin: 7px;
+  padding: 7px;
+}
 .demo-header {
   background-color: #29ABE2;
   font-family: 'Poppins', sans-serif;
@@ -74,12 +79,12 @@
 
 /*FOOTER*/
 html {
-    /*position: relative;*/
+    position: relative;
     min-height: 100%;
 }
-/*body {
+body {
     margin: 0 0 60px;  bottom has to be the same as footer height 
-}*/
+}
 footer {
     /* just for demo */
     background-color: #29ABE2;
@@ -98,19 +103,6 @@ footer {
 }
 
 /*CATEGORIAS*/
-/** {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}*/
-
-/*body {
-  background: #FFF;
-  font-family: 'Open Sans', Arial, 'Helvetica Neue', Sans-serif, Verdana, Tahoma;
-  font-size: 62.5%;
-}*/
 
 ul {list-style-type: none;}
 
@@ -124,14 +116,14 @@ a {
  * Contendor Principal 
  =============================================*/
  .main-wrapper {
-  /*display: -webkit-box;
+  display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
-  display: -webkit-flex;*/
+  display: -webkit-flex;
   display: flex;
   
-  /*-webkit-flex-flow: row wrap;
-  justify-content: space-around;*/
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
   margin: 50px auto 40px;
   width: 960px;
  }
@@ -169,9 +161,9 @@ a {
 
 .list-category label {
   display: inline-block;
-  color: #E5E5E5;
+  color: #ffff;
   cursor: pointer;
-  background: #3e4257;
+  background: #29ABE2;
   -webkit-box-shadow: inset 0 -2px 0 rgba(0,0,0,0.25);
   box-shadow: inset 0 -2px 0 rgba(0,0,0,0.25);
   -webkit-border-radius: 3px;
@@ -197,47 +189,50 @@ a {
   background: white;
 }
 
-.zelda{ 
+/*.caja{ 
   width: 90%;
   height: 30%;
   margin: 1em;
-  background-image: url("../img/bosque.png");
+  
   background-size: cover; 
   position: center;
+}*/
+
+.url_img{
+  width: 50%;
+  display: block;
+  margin: auto;
+}
+h1{
+  text-align: center;
+
+}
+#mainContent
+{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-left: 10%;
+  padding-right: 10%;
+  
 }
 
-.rime{ 
-  width: 90%;
-  height: 30%;
-  margin: 1em;
-  background-image: url("../img/bosque.png");
-  background-size: cover; 
-  position: center;
+#mainContent h1
+{
+  text-decoration: none;
+  color: black;
+  margin: 2% 0%;
 }
-
-.gris{ 
-  width: 90%;
-  height: 30%;
-  margin: 1em;
-  background-image: url("../img/bosque.png");
-  background-size: cover; 
-  position: center;
+ .main-wrapper
+ 
+{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-left: 10%;
+  padding-right: 10%;
+  
 }
-
-.skyrim{ 
-  width: 90%;
-  height: 30%;
-  margin: 1em;
-  background-image: url("../images/skyrim.png");
-  background-size: cover; 
-  position: center;
-}
-
-.resident{
-  width: 90%;
-  height: 30%;
-  margin: 1em;
-  background-image: url("../images/resident-evil.png");
-  background-size: cover; 
-  position: center;
-}
+ 

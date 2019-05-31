@@ -58,7 +58,7 @@ class categoriaController extends Controller {
 			//instanciar new model  $a = anadir_cat;
 			$mensaje = $a->anadir_relato($cat_story, $nom_story, $story, $insertImg[2], $user);
 			
-			header("location: proyecto_final/home/index");
+			header('Location:'. BASE_DOMAIN_DIR_URL . 'home/index');
 		}
 	}
 

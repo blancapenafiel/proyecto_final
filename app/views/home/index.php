@@ -21,23 +21,24 @@
 
 		</div>
 	</div>
-	<div class="contenedor">
-		<div class="row" id="mainContent">
+	
+		<div class="" id="mainContent">
 			<?php
 				$relatos = homeController::allrelatos();
 			
 				 foreach ($relatos as $value) 
 					{
 
-						echo ($value['nombre']);	
-						echo "<div>".utf8_encode($value['descripcion'])."</div>";
-						var_dump($value);
-						echo "<br>";
+						echo "<div class='caja'><h1>".utf8_encode($value['nombre'])."</h1>";
+						echo "<br><img class='url_img'src='".($value['url_relato'])."'>";	
+						echo "<br><div> Descripcion".utf8_encode($value['descripcion'])."</div>";
+						echo "</div><br>";
+						
 				 	}
 
 			?>
 		</div>
-		<a type="application/rss+xml" href="prueba.rss">
+<!-- 		<a type="application/rss+xml" href="prueba.rss">
 			<img src="rss.png">
-		</a>
-	</div>	
+		</a> -->
+	
